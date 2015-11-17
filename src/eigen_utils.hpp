@@ -25,6 +25,7 @@
 #include <sstream>
 #include <string>
 #include <limits>
+#include <boost/static_assert.hpp>
 
 namespace flexiblesusy {
 
@@ -82,7 +83,7 @@ void remove_if_equal(const Eigen::Array<Real,Nsrc,1>& src,
                      const Eigen::Array<Real,Ncmp,1>& cmp,
                      Eigen::Array<Real,Ndst,1>& dst)
 {
-   static_assert(Nsrc == Ncmp + Ndst,
+   BOOST_STATIC_ASSERT_MSG(Nsrc == Ncmp + Ndst,
                  "Error: remove_if_equal: vectors have incompatible length!");
 
    Eigen::Array<Real,Nsrc,1> non_equal(src);

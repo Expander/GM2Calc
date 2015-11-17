@@ -36,11 +36,13 @@
 #include <iostream>
 #include <algorithm>
 
+#include <boost/static_assert.hpp>
+
 namespace {
 template <typename Derived>
 void Symmetrize(Eigen::MatrixBase<Derived>& m)
 {
-   static_assert(Eigen::MatrixBase<Derived>::RowsAtCompileTime ==
+   BOOST_STATIC_ASSERT_MSG(Eigen::MatrixBase<Derived>::RowsAtCompileTime ==
                  Eigen::MatrixBase<Derived>::ColsAtCompileTime,
                  "Symmetrize is only defined for squared matrices");
 
