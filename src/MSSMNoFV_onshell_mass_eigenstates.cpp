@@ -244,8 +244,8 @@ void CLASSNAME::print(std::ostream& ostr) const
  */
 void CLASSNAME::calculate_DRbar_masses()
 {
-   const auto old_mHd2 = mHd2;
-   const auto old_mHu2 = mHu2;
+   const double old_mHd2 = mHd2;
+   const double old_mHu2 = mHu2;
 
    solve_ewsb_tree_level_via_soft_higgs_masses();
 
@@ -480,7 +480,7 @@ double CLASSNAME::get_mass_matrix_Glu() const
 
 void CLASSNAME::calculate_MGlu()
 {
-   const auto mass_matrix_Glu = get_mass_matrix_Glu();
+   const double mass_matrix_Glu = get_mass_matrix_Glu();
    PhaseGlu = std::polar(1., 0.5 * std::arg(std::complex<double>(mass_matrix_Glu)));
    MGlu = std::abs(mass_matrix_Glu);
 }
@@ -492,7 +492,7 @@ double CLASSNAME::get_mass_matrix_VP() const
 
 void CLASSNAME::calculate_MVP()
 {
-   const auto mass_matrix_VP = get_mass_matrix_VP();
+   const double mass_matrix_VP = get_mass_matrix_VP();
    MVP = std::abs(mass_matrix_VP);
 }
 
@@ -506,7 +506,7 @@ double CLASSNAME::get_mass_matrix_VZ() const
 
 void CLASSNAME::calculate_MVZ()
 {
-   const auto mass_matrix_VZ = get_mass_matrix_VZ();
+  const double mass_matrix_VZ = get_mass_matrix_VZ();
    MVZ = std::sqrt(std::abs(mass_matrix_VZ));
 }
 
@@ -519,7 +519,7 @@ double CLASSNAME::get_mass_matrix_Fd() const
 
 void CLASSNAME::calculate_MFd()
 {
-   const auto mass_matrix_Fd = get_mass_matrix_Fd();
+   const double mass_matrix_Fd = get_mass_matrix_Fd();
    MFd = std::abs(mass_matrix_Fd);
 }
 
@@ -532,7 +532,7 @@ double CLASSNAME::get_mass_matrix_Fs() const
 
 void CLASSNAME::calculate_MFs()
 {
-   const auto mass_matrix_Fs = get_mass_matrix_Fs();
+   const double mass_matrix_Fs = get_mass_matrix_Fs();
    MFs = std::abs(mass_matrix_Fs);
 }
 
@@ -545,7 +545,7 @@ double CLASSNAME::get_mass_matrix_Fb() const
 
 void CLASSNAME::calculate_MFb()
 {
-   const auto mass_matrix_Fb = get_mass_matrix_Fb();
+   const double mass_matrix_Fb = get_mass_matrix_Fb();
    MFb = std::abs(mass_matrix_Fb);
 }
 
@@ -558,7 +558,7 @@ double CLASSNAME::get_mass_matrix_Fu() const
 
 void CLASSNAME::calculate_MFu()
 {
-   const auto mass_matrix_Fu = get_mass_matrix_Fu();
+   const double mass_matrix_Fu = get_mass_matrix_Fu();
    MFu = std::abs(mass_matrix_Fu);
 }
 
@@ -571,7 +571,7 @@ double CLASSNAME::get_mass_matrix_Fc() const
 
 void CLASSNAME::calculate_MFc()
 {
-   const auto mass_matrix_Fc = get_mass_matrix_Fc();
+  const double mass_matrix_Fc = get_mass_matrix_Fc();
    MFc = std::abs(mass_matrix_Fc);
 }
 
@@ -584,7 +584,7 @@ double CLASSNAME::get_mass_matrix_Ft() const
 
 void CLASSNAME::calculate_MFt()
 {
-   const auto mass_matrix_Ft = get_mass_matrix_Ft();
+   const double mass_matrix_Ft = get_mass_matrix_Ft();
    MFt = std::abs(mass_matrix_Ft);
 }
 
@@ -595,7 +595,7 @@ double CLASSNAME::get_mass_matrix_Fve() const
 
 void CLASSNAME::calculate_MFve()
 {
-   const auto mass_matrix_Fve = get_mass_matrix_Fve();
+   const double mass_matrix_Fve = get_mass_matrix_Fve();
    MFve = std::abs(mass_matrix_Fve);
 }
 
@@ -606,7 +606,7 @@ double CLASSNAME::get_mass_matrix_Fvm() const
 
 void CLASSNAME::calculate_MFvm()
 {
-   const auto mass_matrix_Fvm = get_mass_matrix_Fvm();
+   const double mass_matrix_Fvm = get_mass_matrix_Fvm();
    MFvm = std::abs(mass_matrix_Fvm);
 }
 
@@ -617,7 +617,7 @@ double CLASSNAME::get_mass_matrix_Fvt() const
 
 void CLASSNAME::calculate_MFvt()
 {
-   const auto mass_matrix_Fvt = get_mass_matrix_Fvt();
+   const double mass_matrix_Fvt = get_mass_matrix_Fvt();
    MFvt = std::abs(mass_matrix_Fvt);
 }
 
@@ -630,7 +630,7 @@ double CLASSNAME::get_mass_matrix_Fe() const
 
 void CLASSNAME::calculate_MFe()
 {
-   const auto mass_matrix_Fe = get_mass_matrix_Fe();
+   const double mass_matrix_Fe = get_mass_matrix_Fe();
    MFe = std::abs(mass_matrix_Fe);
 }
 
@@ -643,7 +643,7 @@ double CLASSNAME::get_mass_matrix_Fm() const
 
 void CLASSNAME::calculate_MFm()
 {
-   const auto mass_matrix_Fm = get_mass_matrix_Fm();
+   const double mass_matrix_Fm = get_mass_matrix_Fm();
    MFm = std::abs(mass_matrix_Fm);
 }
 
@@ -656,7 +656,7 @@ double CLASSNAME::get_mass_matrix_Ftau() const
 
 void CLASSNAME::calculate_MFtau()
 {
-   const auto mass_matrix_Ftau = get_mass_matrix_Ftau();
+   const double mass_matrix_Ftau = get_mass_matrix_Ftau();
    MFtau = std::abs(mass_matrix_Ftau);
 }
 
@@ -670,7 +670,7 @@ double CLASSNAME::get_mass_matrix_SveL() const
 
 void CLASSNAME::calculate_MSveL()
 {
-   const auto mass_matrix_SveL = get_mass_matrix_SveL();
+   const double mass_matrix_SveL = get_mass_matrix_SveL();
    MSveL = std::sqrt(std::abs(mass_matrix_SveL));
 }
 
@@ -684,7 +684,7 @@ double CLASSNAME::get_mass_matrix_SvmL() const
 
 void CLASSNAME::calculate_MSvmL()
 {
-   const auto mass_matrix_SvmL = get_mass_matrix_SvmL();
+   const double mass_matrix_SvmL = get_mass_matrix_SvmL();
 
    if (mass_matrix_SvmL < 0.)
       problems.flag_tachyon("SvmL");
@@ -702,7 +702,7 @@ double CLASSNAME::get_mass_matrix_SvtL() const
 
 void CLASSNAME::calculate_MSvtL()
 {
-   const auto mass_matrix_SvtL = get_mass_matrix_SvtL();
+   const double mass_matrix_SvtL = get_mass_matrix_SvtL();
    MSvtL = std::sqrt(std::abs(mass_matrix_SvtL));
 }
 
@@ -725,7 +725,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Sd() const
 
 void CLASSNAME::calculate_MSd()
 {
-   const auto mass_matrix_Sd(get_mass_matrix_Sd());
+   const Eigen::Matrix<double,2,2> mass_matrix_Sd(get_mass_matrix_Sd());
    fs_diagonalize_hermitian(mass_matrix_Sd, MSd, ZD);
    MSd = sqrt(MSd.cwiseAbs());
 }
@@ -749,7 +749,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Su() const
 
 void CLASSNAME::calculate_MSu()
 {
-   const auto mass_matrix_Su(get_mass_matrix_Su());
+  const Eigen::Matrix<double,2,2> mass_matrix_Su(get_mass_matrix_Su());
    fs_diagonalize_hermitian(mass_matrix_Su, MSu, ZU);
    MSu = sqrt(MSu.cwiseAbs());
 }
@@ -773,7 +773,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Se() const
 
 void CLASSNAME::calculate_MSe()
 {
-   const auto mass_matrix_Se(get_mass_matrix_Se());
+   const Eigen::Matrix<double,2,2> mass_matrix_Se(get_mass_matrix_Se());
    fs_diagonalize_hermitian(mass_matrix_Se, MSe, ZE);
    MSe = sqrt(MSe.cwiseAbs());
 }
@@ -797,7 +797,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Sm() const
 
 void CLASSNAME::calculate_MSm()
 {
-   const auto mass_matrix_Sm(get_mass_matrix_Sm());
+   const Eigen::Matrix<double,2,2> mass_matrix_Sm(get_mass_matrix_Sm());
    fs_diagonalize_hermitian(mass_matrix_Sm, MSm, ZM);
 
    if (MSm.minCoeff() < 0.)
@@ -825,7 +825,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Stau() const
 
 void CLASSNAME::calculate_MStau()
 {
-   const auto mass_matrix_Stau(get_mass_matrix_Stau());
+   const Eigen::Matrix<double,2,2> mass_matrix_Stau(get_mass_matrix_Stau());
    fs_diagonalize_hermitian(mass_matrix_Stau, MStau, ZTau);
 
    if (MStau.minCoeff() < 0.)
@@ -853,7 +853,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Ss() const
 
 void CLASSNAME::calculate_MSs()
 {
-   const auto mass_matrix_Ss(get_mass_matrix_Ss());
+   const Eigen::Matrix<double,2,2> mass_matrix_Ss(get_mass_matrix_Ss());
    fs_diagonalize_hermitian(mass_matrix_Ss, MSs, ZS);
    MSs = sqrt(MSs.cwiseAbs());
 }
@@ -877,7 +877,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Sc() const
 
 void CLASSNAME::calculate_MSc()
 {
-   const auto mass_matrix_Sc(get_mass_matrix_Sc());
+   const Eigen::Matrix<double,2,2> mass_matrix_Sc(get_mass_matrix_Sc());
    fs_diagonalize_hermitian(mass_matrix_Sc, MSc, ZC);
    MSc = sqrt(MSc.cwiseAbs());
 }
@@ -901,7 +901,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Sb() const
 
 void CLASSNAME::calculate_MSb()
 {
-   const auto mass_matrix_Sb(get_mass_matrix_Sb());
+   const Eigen::Matrix<double,2,2> mass_matrix_Sb(get_mass_matrix_Sb());
    fs_diagonalize_hermitian(mass_matrix_Sb, MSb, ZB);
 
    if (MSb.minCoeff() < 0.)
@@ -929,7 +929,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_St() const
 
 void CLASSNAME::calculate_MSt()
 {
-   const auto mass_matrix_St(get_mass_matrix_St());
+   const Eigen::Matrix<double,2,2> mass_matrix_St(get_mass_matrix_St());
    fs_diagonalize_hermitian(mass_matrix_St, MSt, ZT);
 
    if (MSt.minCoeff() < 0.)
@@ -956,7 +956,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_hh() const
 
 void CLASSNAME::calculate_Mhh()
 {
-   const auto mass_matrix_hh(get_mass_matrix_hh());
+   const Eigen::Matrix<double,2,2> mass_matrix_hh(get_mass_matrix_hh());
    fs_diagonalize_hermitian(mass_matrix_hh, Mhh, ZH);
 
    if (Mhh.minCoeff() < 0.)
@@ -988,7 +988,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Ah() const
 
 void CLASSNAME::calculate_MAh()
 {
-   const auto mass_matrix_Ah(get_mass_matrix_Ah());
+   const Eigen::Matrix<double,2,2> mass_matrix_Ah(get_mass_matrix_Ah());
    fs_diagonalize_hermitian(mass_matrix_Ah, MAh, ZA);
 
    if (MAh.minCoeff() < 0.)
@@ -1014,7 +1014,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Hpm() const
 
 void CLASSNAME::calculate_MHpm()
 {
-   const auto mass_matrix_Hpm(get_mass_matrix_Hpm());
+   const Eigen::Matrix<double,2,2> mass_matrix_Hpm(get_mass_matrix_Hpm());
    fs_diagonalize_hermitian(mass_matrix_Hpm, MHpm, ZP);
 
    if (MHpm.minCoeff() < 0.)
@@ -1045,7 +1045,7 @@ Eigen::Matrix<double,4,4> CLASSNAME::get_mass_matrix_Chi() const
 
 void CLASSNAME::calculate_MChi()
 {
-   const auto mass_matrix_Chi(get_mass_matrix_Chi());
+   const Eigen::Matrix<double,4,4> mass_matrix_Chi(get_mass_matrix_Chi());
    fs_diagonalize_symmetric(mass_matrix_Chi, MChi, ZN);
 }
 
@@ -1063,7 +1063,7 @@ Eigen::Matrix<double,2,2> CLASSNAME::get_mass_matrix_Cha() const
 
 void CLASSNAME::calculate_MCha()
 {
-   const auto mass_matrix_Cha(get_mass_matrix_Cha());
+   const Eigen::Matrix<double,2,2> mass_matrix_Cha(get_mass_matrix_Cha());
    fs_svd(mass_matrix_Cha, MCha, UM, UP);
 }
 
@@ -1076,7 +1076,7 @@ double CLASSNAME::get_mass_matrix_VWm() const
 
 void CLASSNAME::calculate_MVWm()
 {
-   const auto mass_matrix_VWm = get_mass_matrix_VWm();
+   const double mass_matrix_VWm = get_mass_matrix_VWm();
    MVWm = std::sqrt(std::abs(mass_matrix_VWm));
 }
 
